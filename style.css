@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* MENU */
+
+.cabecalho {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.menu {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.links-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.links-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.botao-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://imgmd.net/images/v1/guia/2918667/bariloche.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 550px;
+    font-size: 1.1rem;
+}
+
+
+/* BOTÕES */
+
+.hero-botoes {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #1479c9;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.botao-secundario {
+    background: white;
+    color: #1479c9;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.fundo {
+    max-width: none;
+    background: #f5f7f8;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: #1479c9;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    font-size: 2.5rem;
+}
+
+
+/* SOBRE */
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sobre-texto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+}
+
+
+/* CARDS */
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.icone {
+    font-size: 2rem;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+
+/* VIAGENS */
+
+.viagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.viagem {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.viagem img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.viagem-info {
+    padding: 25px;
+}
+
+.viagem-info span {
+    font-size: 0.85rem;
+    color: #1479c9;
+}
+
+.viagem-info h3 {
+    font-size: 1.6rem;
+}
+
+.viagem-info a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #1479c9;
+    font-weight: bold;
+}
+
+
+/* GALERIA */
+
+.galeria {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.depoimento {
+    padding: 35px;
+    background: #f5f7f8;
+    border-radius: 12px;
+}
+
+.depoimento p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+
+/* CONTATO */
+
+.contato {
+    padding: 100px 20px;
+    text-align: center;
+    background: #1479c9;
+    color: white;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contato .botao {
+    margin-top: 25px;
+    background: white;
+    color: #1479c9;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .botao-menu {
+        display: block;
+    }
+
+    .links-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .links-menu.ativo {
+        display: flex;
+    }
+
+    .sobre-conteudo,
+    .cards,
+    .viagens,
+    .galeria,
+    .depoimentos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+}
